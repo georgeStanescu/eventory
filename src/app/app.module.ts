@@ -4,35 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { PostsModule } from './posts/posts.module';
+
 import { AppComponent } from './app.component';
-import { PostsComponent } from './posts/posts.component';
 
-import { PostsService } from './posts.service';
-
-const ROUTES = [
-  {
-    path: '',
-    redirectTo: 'posts',
-    pathMatch: 'full'
-  },
-  {
-    path: 'posts',
-    component: PostsComponent
-  }
-];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PostsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    AppRoutingModule,
+    CoreModule,
+    SharedModule,
+    PostsModule
   ],
-  providers: [PostsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
