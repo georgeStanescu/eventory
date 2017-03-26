@@ -7,10 +7,10 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { NavigationModule } from './navigation/navigation.module';
 import { PostsModule } from './posts/posts.module';
 
 import { AppComponent } from './app.component';
-
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     CoreModule,
     SharedModule,
+    NavigationModule,
     PostsModule
   ],
   providers: [],
