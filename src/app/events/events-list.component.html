@@ -1,0 +1,36 @@
+<p-dataList [value]="events" [paginator]="true" [rows]="5">
+    <template let-event pTemplate="item">
+        <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px;border-bottom:1px solid #D5D5D5;">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-3" style="text-align:center">
+                  <img src="http://placehold.it/150x150"></div>
+                <div class="ui-grid-col-9">
+                    <div class="ui-grid ui-grid-responsive ui-fluid">
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-10"><strong>{{event.name}}</strong></div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2">Description: </div>
+                            <div class="ui-grid-col-10">{{event.description}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2">Date: </div>
+                            <div class="ui-grid-col-10">{{event.dateTime}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2">Location(<a href="#">show</a>): </div>
+                            <div class="ui-grid-col-10">{{event.location}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2">Tags: </div>
+                            <div class="ui-grid-col-10">sport, outdoor, health</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-10"><a>More details</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</p-dataList>

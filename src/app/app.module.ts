@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { NavigationModule } from './navigation/navigation.module';
+import { EventsModule } from './events/events.module';
 import { PostsModule } from './posts/posts.module';
 
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ export function TranslateHttpLoaderFactory(http: Http) {
     CoreModule,
     SharedModule,
     NavigationModule,
+    EventsModule,
     PostsModule,
     TranslateModule.forRoot({
       loader: {
